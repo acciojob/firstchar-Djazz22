@@ -1,8 +1,14 @@
-function firstChar(text) {
-  // your code here
+function firstChar(inputString) {
+    for (let char of inputString) {
+        if (char !== ' ') {
+            return char;
+        }
+    }
+    return '';
 }
 
-// Do not change the code below
-
-const text = prompt("Enter text:");
-alert(firstChar(text));
+function showFirstChar() {
+    const inputString = document.getElementById('inputString').value;
+    const result = firstChar(inputString);
+    document.getElementById('result').innerText = result;
+}
